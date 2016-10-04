@@ -1,0 +1,314 @@
+		body{
+				max-height: 400px;
+			}
+		  	#wrapper{
+			   width: 100%;
+			   height: 100vh;/*视窗高度*/
+			   position: relative;
+			   overflow: hidden;
+			   margin-bottom: 50px;
+			}
+			#score{
+				margin-top: 300px;
+				width: 250px;
+				height: 150px;
+				background: rgba(0,0,0,1);
+				border: 5px solid #ccc;
+				text-align: center;
+				color: white;
+				font-weight:bold;
+				font-size: 40px;
+				font-family:"Microsoft YaHei";
+			}
+			.p0{
+				position: relative;
+	            animation: myani  5s linear 1s 5 alternate ;
+	            -moz-animation: myani 5s linear 1s 5 alternate;
+	            -webkit-animation:myani 5s  linear 1s 5 alternate;
+			}
+			 @keyframes myani  {
+            0%{
+                left: -30px;
+                top: -30px;
+                 }
+            25%{
+                left: -80px;
+                top: -80;
+            }
+            50%{
+                left: -100px;
+                top: -100px;
+            }
+            75%{
+                left: -150px;
+                top: -150px;
+            }
+           100%{
+                left: -200px;
+                top: -200px;
+            }
+        }
+
+        .p1{
+				position: relative;
+	            animation: myani1  5s linear 1s 5 alternate ;
+	            -moz-animation: myani1 5s linear 1s 5 alternate;
+	            -webkit-animation:myani1 5s  linear 1s 5 alternate;
+			}
+			 @keyframes myani1  {
+            0%{
+                left: 30px;
+                top: 100px;
+                 }
+            25%{
+                left: 50px;
+                top: 200px;
+            }
+            50%{
+                left: 100px;
+                top: 300px;
+            }
+            75%{
+                left: 150px;
+                top: 400px;
+            }
+           100%{
+                left: 300px;
+                top: 500px;
+            }
+        }
+        .p2{
+				position: relative;
+	            animation: myani2  8s linear 1s 5 alternate ;
+	            -moz-animation: myani2 8s linear 1s 5 alternate;
+	            -webkit-animation:myani2 8s  linear 1s 5 alternate;
+			}
+			 @keyframes myani2  {
+            0%{
+                left: -30px;
+                top: 100px;
+                 }
+            25%{
+                left: -50px;
+                top: 200px;
+            }
+            50%{
+                left: -100px;
+                top: 300px;
+            }
+            75%{
+                left: -150px;
+                top: 400px;
+            }
+           100%{
+                left: -300px;
+                top: 500px;
+            }
+        }
+         .p3{
+				position: relative;
+	            animation: myani3  8s linear 1s 5 alternate ;
+	            -moz-animation: myani3 8s linear 1s 5 alternate;
+	            -webkit-animation:myani3 8s  linear 1s 5 alternate;
+			}
+			 @keyframes myani3  {
+            0%{
+                left: 100px;
+                top: -30px;
+                 }
+            25%{
+                left: 200px;
+                top: -50px;
+            }
+            50%{
+                left: 300px;
+                top: -100px;
+            }
+            75%{
+                left: 400px;
+                top: -150px;
+            }
+           100%{
+                left: 500px;
+                top: -300px;
+            }
+        }
+			#begin{
+				width: 100%;
+				height: 100vh;
+				background: url("images/background.png");
+				position: relative;
+			}
+			.button{
+				width: 500px;
+				height: 500px;
+				position: absolute;
+				top:50%;
+				left: 50%;
+				margin-top: -250px;
+				margin-left: -250px;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+
+			}
+			#img{
+				margin-top: 30px;
+
+			}
+			#button1{
+				margin: 20px auto;
+				vertical-align: middle;
+				font-family: "微软雅黑";
+				width: 155px;
+				height: 100px;
+				background-image: url(images/play.png) ;
+				position: absolute;
+				position: relative;
+	            animation: myani4  5s linear  1 alternate ;
+	            -moz-animation: myani4 5s linear  1 alternate;
+	            -webkit-animation:myani4 5s  linear  1 alternate;
+			}
+			 @keyframes myani4  {
+            0%{
+                left: -500px;
+                top: -500px;
+                 }
+            25%{
+                left: -350px;
+                top: -400px;
+            }
+            50%{
+                left: -250px;
+                top: -200px;
+            }
+            75%{
+                left: -150px;
+                top: 0px;
+            }
+           100%{
+                left: 10px;
+                top: 10px;
+            }
+        }
+			#button1:hover{
+				transform:scale(1.2);
+				-ms-transform:scale(1.2); 	/* IE 9 */
+				-moz-transform:scale(1.2); 	/* Firefox */
+				-webkit-transform:scale(1.2); /* Safari 和 Chrome */
+				-o-transform:scale(1.2);
+			}
+			.hidden{
+				display: none;
+			}
+
+			#blackout{
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,1);
+				position: fixed;
+				padding-top: 200px;
+				top: 0;
+				left: 0;
+				display: none;
+				font-size: 30px;
+				color: red;
+				text-align: center;
+				vertical-align: middle;
+				z-index: 100;
+
+			}
+			h3{
+				text-align: center;
+				color: red;
+			}
+			.wall{
+				background-image: url('images/wall.png');
+				background-color: blue;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.space{
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman{
+				background-image: url('images/pacman.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_left{
+				background-image: url('images/pacman_left.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_up{
+				background-image: url('images/pacman_up.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.pacman_down{
+				background-image: url('images/pacman_down.gif');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.dot {
+				background-image: url('images/dot.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.cion{
+				background-image: url('images/coin.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.cherry{
+				background-image: url('images/cherry.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			} 
+			.ghost1{
+				background-image: url('images/ghost1.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost2{
+				background-image: url('images/ghost2.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost3{
+				background-image: url('images/ghost3.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.ghost4{
+				background-image: url('images/ghost4.png');
+				background-color: black;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}

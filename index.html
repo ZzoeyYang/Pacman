@@ -1,0 +1,64 @@
+<html>
+	<head>
+	<title>Pacman</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+
+		<div class="audio">
+				<audio id="gameover" src="audio/gameover.wav" type="audio/wav"></audio>
+				<audio id="eating" src="audio/eating.wav" type="audio/wav"></audio>
+				<audio id="loselife" src="audio/loselife.wav" type="audio/wav"></audio>
+				<audio id="opening" src="audio/opening.wav" type="audio/wav" loop="loop"></audio>
+				<audio id="fruit" src="audio/fruit.wav" type="audio/wav"></audio>
+			</div>
+
+		<div id = "wrapper" class="hidden">
+			<div id = "world"></div>
+			<div id="score">
+			     SCORE:
+				<h3 id = "scoreBoard"></h3>
+			</div>
+		</div>
+		<div id="begin">
+			<div class="button">
+				<div id="img">
+					<img src="images/0.png" class="p0">
+					<img src="images/1.png" class="p1">
+					<img src="images/2.png" class="p2">
+					<img src="images/3.png" class="p3">
+				</div>
+				<a ><input type="button" name="begin" id="button1" ></a>
+			</div>
+		</div>
+		<script src = "pacman.js"></script>
+		<script>
+			var map = [
+				1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+				1,0,0,0,8,0,0,9,0,0,0,6,0,0,1,
+				1,0,1,1,1,1,0,0,1,1,1,1,1,0,1,
+				1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,
+				1,0,1,0,5,0,0,0,0,0,0,0,1,0,1,
+				1,0,1,0,0,1,1,0,1,1,0,1,1,0,1,
+				1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,
+				1,0,2,0,0,1,0,0,0,1,0,7,0,0,1,
+				1,0,1,0,0,1,1,1,1,1,0,0,1,0,1,
+				1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,
+				1,0,0,0,0,1,1,1,0,0,4,0,0,0,1,
+				1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+				1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			];
+			var opening = document.getElementById("opening");
+			opening.play();
+			var button = document.getElementById('button1').onclick = function(){
+				opening.pause();
+				document.getElementById('begin').style.display="none";
+				document.getElementById('wrapper').classList.remove('hidden')
+				var game = Pacman('world', map, 'scoreBoard', 0, 300);
+				game.drawWorld();
+			}
+
+		</script>
+	</body>
+
+</html>
